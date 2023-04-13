@@ -1,0 +1,13 @@
+<mat-form-field appearance="fill">
+  <mat-label>Different locale</mat-label>
+  <input matInput [matDatepicker]="dp" [formControl]="serializedDate" />
+  <mat-hint>{{getDateFormatString()}}</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+  <mat-datepicker #dp></mat-datepicker>
+</mat-form-field>
+<button mat-button (click)="french()">Dynamically switch to French</button>
+<button mat-button (click)="japan()">Dynamically switch to Japanense</button>
+
+<!-- Copyright 2023 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
